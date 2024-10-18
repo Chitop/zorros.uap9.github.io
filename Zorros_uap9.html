@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zorros_uap9</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: red; /* Fondo rojo */
+        }
+
+        .top-bar {
+            background-color: black; /* Franja negra */
+            height: 100px; /* Ajusta el tamaño de la franja */
+            width: 100%; /* Ocupa todo el ancho de la página */
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Centra vertical y horizontalmente el contenido */
+        }
+
+        h1 {
+            color: white; /* Color del texto */
+            margin: 0; /* Elimina el margen extra del h1 */
+        }
+
+        img {
+            margin-left: 10px; /* Espacio entre el texto y el logo */
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <h1>
+            Zorros_uap9
+            <img src="images/WhatsApp Image 2024-10-12 at 13.23.23.jpeg" alt="Logo" style="width: 50px; height: auto;">
+        </h1>
+    </div>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
